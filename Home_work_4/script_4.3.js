@@ -41,5 +41,4 @@ if (userBirthYear !== null && userBirthYear !== "") {
       alert(result);
     } else alert("It's a pity you didn't want to enter your favorite sport :(");
   } else alert("It's a pity you didn't want to enter your city from :(");
-} else
-  alert("It's a pity you didn't want to enter your year of aaaaaabirth :(");
+} else alert("It's a pity you didn't want to enter your year of birth :(");
