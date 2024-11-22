@@ -1,5 +1,6 @@
 const input = prompt("Enter a number");
 const primeNumber = parseInt(input, 10);
+asdasdasdadadadsdsda;
 
 if (input !== null && input.trim() !== "") {
   if (isNaN(primeNumber) || primeNumber <= 1) {
