@@ -11,5 +11,5 @@ if (input !== null && input.trim() !== "") {
     // if (squaredNum <= inputNumber) {
     //   console.log(`${i}² = ${squaredNum}`);
     // } else break;
-  } else alert("You entered an incorrect number or!");
-} else alert("It's  pity that you didn't enter a number!");
+  } else alert("You entered an incorrect number!");
+} else alert("It's pity that you didn't enter a number!");
