@@ -1,12 +1,12 @@
 const userBirthYear = prompt("What year are you born?");
 
-if (userBirthYear.trim()) {
+if (userBirthYear !== null && userBirthYear.trim() !== "") {
   const userCity = prompt("What city are you from?");
 
-  if (userCity.trim()) {
+  if (userCity !== null && userCity.trim() !== "") {
     const userSport = prompt("What is your favorite sport?");
 
-    if (userSport.trim()) {
+    if (userSport !== null && userSport.trim() !== "") {
       const userAge = new Date().getFullYear() - userBirthYear;
       let result = `You are ${userAge} years old!\n`;
 
