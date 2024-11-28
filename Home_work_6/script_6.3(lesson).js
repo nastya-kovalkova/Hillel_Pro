@@ -1,19 +1,19 @@
 const array = ["Hello", "a", true, 100, null, [1], { name: "Ann" }, 0];
 
 function removeElement(array, item) {
-  let newLength = 0;
+  let writeIndex = 0;
 
   for (let i = 0; i < array.length; i++) {
-    if (JSON.stringify(array[i]) !== JSON.stringify(item)) {
-      array[newLength] = array[i];
-      newLength++;
+    if (array[i] !== item) {
+      array[writeIndex] = array[i];
+      writeIndex++;
     }
   }
 
-  array.length = newLength;
+  array.length = writeIndex;
 }
 
-// removeElement(array, [1]);
+removeElement(array, [1]);
 removeElement(array, { name: "Ann" });
 // removeElement(array, true);
 // removeElement(array, "Hello");
