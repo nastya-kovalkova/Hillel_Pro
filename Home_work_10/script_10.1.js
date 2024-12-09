@@ -22,7 +22,7 @@ function User(name, surname, age, location, profession) {
   this.profession = profession;
 }
 
-User.prototype.getInfo = () => {
+User.prototype.getInfo = function () {
   return {
     name: this.name,
     surname: this.surname,
@@ -39,4 +39,5 @@ const user = new User(
   "Poznan",
   "Frontend developer",
 );
-console.log(user);
+
+console.log(user.getInfo());
