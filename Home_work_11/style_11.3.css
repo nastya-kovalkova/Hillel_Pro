@@ -1,0 +1,31 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.text {
+    font-size: 18px;
+    text-align: center;
+    width: 70%;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.button {
+    border: none;
+    background-color: #25592b;
+    color: white;
+    font-size: 18px;
+    padding: 20px 40px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #17381b;
+}
+
