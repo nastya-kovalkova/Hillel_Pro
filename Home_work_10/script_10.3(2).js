@@ -16,10 +16,8 @@ const contacts = [
   },
 ];
 
-let idNumber = 1;
-
 function Contact({ name, phone, email }) {
-  this.id = idNumber++;
+  this.id = phone + 123;
   this.name = name;
   this.phone = phone;
   this.email = email;
@@ -36,10 +34,10 @@ function Book(contacts) {
 const book = new Book(mappedContacts);
 
 Book.prototype.find = function (name) {
-  const contact = this.contacts.find((contact) => contact.name === name);
-  if (contact) {
-    return contact;
-  } else return "no contact";
+  const foundContact = this.contacts.find((contact) => contact.name === name);
+  if (foundContact) {
+    return foundContact;
+  } else return null;
 };
 
 Book.prototype.add = function (contact) {
@@ -48,21 +46,22 @@ Book.prototype.add = function (contact) {
 };
 
 Book.prototype.remove = function (id) {
-  const contactToDelete = this.contacts.find((el) => el.id === id);
-  if (contactToDelete) {
+  const index = this.contacts.findIndex((contact) => contact.id === id);
+  if (index !== -1) {
+    this.contacts.splice(index, 1);
+    return true;
   }
+  return null;
 };
 
-// Book.prototype.update = (id) => {
-// };
-
-// const mappedContacts = contacts.map((el) => {
-//   return new Contact(el);
-// });
-
-// const book = new Book(mappedContacts);
-
-// console.log(book);
+Book.prototype.update = function (id, updatedData) {
+  const contact = this.contacts.find((contact) => contact.id === id);
+  if (contact) {
+    Object.assign(contact, updatedData);
+    return true;
+  }
+  return null;
+};
 
 const resultFind = book.find("Anastasiia");
 console.log(resultFind);
@@ -78,5 +77,9 @@ book.add({
   phone: "+305025825367",
   email: "gusigusi@email.com",
 });
+
+console.log(book.remove("+380999999999123"));
+
+book.update("+305025825367123", { name: "Tom" });
 
 console.log(book);
