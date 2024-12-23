@@ -1,0 +1,96 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+button {
+    font: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input, textarea {
+    width: 100%;
+    font: inherit;
+    border: none;
+    outline: transparent;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Candara", sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+    padding: 15px 25px;
+    color: white;
+    background-color: #392b7a;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn--none {
+    pointer-events: none;
+    background-color: grey;
+    opacity: 0.8;
+}
+
+.btn:hover {
+    background-color: #1d174b;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form {
+    padding: 40px 35px;
+    background-color: #e7e7e7;
+    border-radius: 25px;
+    max-width: 475px;
+}
+
+.error {
+    color: #a91212;
+    font-size: 12px;
+    display: none;
+}
+
+.error--visible {
+    display: block;
+}
+
+.form__title {
+    margin-bottom: 20px;
+    color: #d12453;
+}
+
+.form__item {
+    margin-bottom: 15px;
+}
+

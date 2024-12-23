@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home work 13</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./script.js"></script>
+</head>
+<body>
+<div class="container">
+  <form class="form" name="contact-form">
+    <h1 class="form__title">We would like to help you</h1>
+    <div class="form__item">
+      <input class="form__input input" type="text" name="name" placeholder="Name" required />
+      <span class="error" id="nameError"></span>
+    </div>
+    <div class="form__item">
+      <textarea class="form__textarea input" name="message" placeholder="Message" required></textarea>
+      <span class="error" id="messageError"></span>
+    </div>
+    <div class="form__item">
+      <input class="form__input input" type="tel" name="phone" placeholder="Phone number" required />
+      <span class="error" id="phoneError"></span>
+    </div>
+    <div class="form__item">
+      <input class="form__input input" type="email" name="email" placeholder="Email" required />
+      <span class="error" id="emailError"></span>
+    </div>
+    <button class="form__submit btn btn--none" type="submit">Send message</button>
+  </form>
+</div>
+</body>
+</html>
