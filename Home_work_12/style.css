@@ -8,6 +8,19 @@ html {
     box-sizing: inherit;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    font: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 body {
     font-family: "Candara", sans-serif;
     font-size: 18px;
@@ -25,15 +38,12 @@ body {
 
 .btn {
     width: 100%;
-    font: inherit;
     text-align: center;
     padding: 15px 25px;
     color: white;
     background-color: #392b7a;
-    border: none;
     border-radius: 5px;
     text-decoration: none;
-    cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -45,4 +55,103 @@ body {
 
 .btn:hover {
     background-color: #1d174b;
+}
+
+.todo-list {
+    min-width: 350px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000000;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-icon {
+    height: 30px;
+}
+
+.item-button {
+    margin-left: auto;
+    transition: opacity 0.3s;
+}
+
+.item-button:hover {
+    opacity: 0.7;
+}
+
+.todo-label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 15px;
+    padding-left: 45px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.todo-label:hover {
+    opacity: 0.8;
+}
+
+.todo-box {
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.todo-fakebox {
+    position: absolute;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    background-color: brown;
+    transition: border 0.3s ease-in-out;
+}
+
+.todo-fakebox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("./images/icon-check.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.todo-box:checked + .todo-fakebox {
+    background-color: #9de790;
+    border: 1px solid #000000;
+}
+
+.todo-box:checked + .todo-fakebox::before {
+    opacity: 1;
+}
+
+.todo-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font: inherit;
+    border: none;
+    outline: transparent;
+    border-radius: 3px;
+    background-color: rgba(171, 163, 163, 0.71);
+}
+
+.todo-add-btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
